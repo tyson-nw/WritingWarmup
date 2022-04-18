@@ -4,4 +4,3 @@
 logs
 *.log
 .DS_Store
-/public/assets/*

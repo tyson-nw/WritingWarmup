@@ -1,0 +1,60 @@
+{
+	"times":[
+		{
+			"length":2,
+			"type":"free",
+			"message":"Think about what you are warming up to write. Write the words that come to mind, they don't have to be complete sentences or thoughts. Just a free flow of thoughts, senses, descriptions and other words for two minutes."
+		},
+		{
+			"length":1,
+			"type":"text",
+			"message":"Look at your list of words, write how do they relate to this prompt the next minute."
+		},
+		{
+			"length":3,
+			"type":"text",
+			"message":"Now write with this prompt as inspriation for three minutes."
+		},
+		{
+			"length":2,
+			"type":"free",
+			"message": "Think about a character in the story you want to work on. Write the words that come to mind when you think of them for two minutes."
+		},
+		{
+			"length":5,
+			"type":"text",
+			"message": "Write how would your character react to this prompt for five minutes"
+		},
+		{
+			"length":2,
+			"type":"free",
+			"message":"Now think of another character in the story you are going to work on. Write the words that come to your mind when you think about this character freely for two minutes"
+		},
+		{
+			"length":3,
+			"type":"text",
+			"message":"Take this prompt write and how his character would interact with it for three minutes."
+		},
+		{
+			"length":6,
+			"type":"text",
+			"message": "Now, write how would both characters interact together with this next prompt for six minutes."
+		},
+		{
+			"length":3,
+			"type":"free",
+			"message":"For the next three minutes write whatever comes to mind. It could be an extension of what you have already written, or something else entirely."
+		},
+		{
+			"length":3,
+			"type":"text",
+			"message":"Finally, for the next three minutes write something about this prompt."
+		}
+	],
+	"prompts":{
+		"key":"14R0pAWCYwDbX_RQ_c1HzXiTz2jJNWkyZ8fv99KUqOxc",
+		"gid":"2050647977",
+		"query":"SELECT%20B%20WHERE%20C%20=%20%27y%27"
+	}
+	
+}

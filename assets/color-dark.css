@@ -1,17 +1,17 @@
 body{
-	background-color: black;
-	color: floralwhite;
+	background-color: #20232B;
+	color: #D8DBE2;
 	padding: 1rem;
 }
 header{
-	background-color: darkgrey;
-	color: #0D0300;
+	background-color: #7C869D;
+	color: #D8DBE2;
 }
 header a{ 
-	color: #0D0300;
+	color: #D8DBE2;
 }
 article{
-	background-color:darkslategrey;
+	background-color:#272B34;
 }
 .warn{
 	background-color: yellow;
@@ -23,9 +23,9 @@ article{
 	color:floralwhite;
 }
 footer{
-	background-color: darkgrey;
-	color: #0D0300;
+	background-color: #7C869D;
+	color: #D8DBE2;
 }
 footer a{ 
-	color: #0D0300;
+	color: #D8DBE2;
 }

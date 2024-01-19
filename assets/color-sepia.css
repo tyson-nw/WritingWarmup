@@ -1,17 +1,18 @@
 body{
-	background-color:peru;
+	background-color:#372D29;
 	padding: 1rem;
+	color: #C7B9AE;
 }
 header{
-	background-color: antiquewhite;
-	color: #0D0300;
+	background-color: #413632;
+	color: #413632;
 }
 header a{ 
-	color: #0D0300;
+	color: #BA945F;
 }
 article{
-	background-color:antiquewhite;
-	box-shadow: 1rem 1rem 2rem burlywood;  
+	background-color:#413632;
+	box-shadow: .5rem .5rem 1rem #BA945F80;  
 }
 .warn{
 	background-color: yellow;
@@ -20,12 +21,12 @@ article{
 	background-color: red;
 }
 #bad_prompt{
-	color:#594225;
+	color:#C7B9AE;
 }
 footer{
-	background-color: peru;
-	color: #0D0300;
+	background-color: #413632;
+	color: #BA945F;
 }
 footer a{ 
-	color: #0D0300;
+	color: #BA945F;
 }

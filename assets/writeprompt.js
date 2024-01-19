@@ -4,6 +4,8 @@ var promptList;
 var current;
 var noSleep = new NoSleep();
 
+
+
 var timer = {
 	state: false,
 	timerId : setInterval(function (){timer.tick()}, 1000),
@@ -54,6 +56,7 @@ let switcher = function(action, target){
 			$( "#write_start_button" ).appendTo($('#nav_source'));
 			$( "#write_pause_button" ).appendTo(target);
 			$( "#write_pause_button" ).off();
+			document.getElementById("sound_start").volume = 0.1;
 			document.getElementById("sound_start").play();
 			$( "#write_pause_button" ).click(function(){timer.pause()});
 			noSleep.enable();
@@ -76,7 +79,7 @@ let switcher = function(action, target){
 		break;
 		case 'warn'://change background of target with yellow
 			$("#write_pause_button").addClass('bg-warning');
-			document.getElementById("sound_warn").volume = 0.75;
+			document.getElementById("sound_warn").volume = 0.25;
 			document.getElementById("sound_warn").play();
 		break;
 		case 'end':	//change the background of target with red and replace pause button with next.

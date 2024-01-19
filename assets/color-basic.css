@@ -1,0 +1,24 @@
+body{
+	background-color:whitesmoke;
+	padding: 1rem;
+}
+header{
+	background-color: lightblue;
+	color: black;
+}
+header a{ 
+	color: black;
+}
+article{
+	background-color:white;
+	box-shadow: 1rem 1rem 2rem rgba(182, 182, 182, 0.5);  
+}
+.warn{
+	background-color: yellow;
+}
+.end {
+	background-color: red;
+}
+#bad_prompt{
+	color:grey;
+}

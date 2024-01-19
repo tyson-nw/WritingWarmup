@@ -3,17 +3,7 @@ var times;
 var promptList;
 var current;
 var noSleep = new NoSleep();
-function changeCSS(cssFile, cssLinkIndex) {
-// https://stackoverflow.com/questions/19844545/replacing-css-file-on-the-fly-and-apply-the-new-style-to-the-page
-    var oldlink = document.getElementsByTagName("link").item(cssLinkIndex);
 
-    var newlink = document.createElement("link");
-    newlink.setAttribute("rel", "stylesheet");
-    newlink.setAttribute("type", "text/css");
-    newlink.setAttribute("href", cssFile);
-
-    document.getElementsByTagName("head").item(0).replaceChild(newlink, oldlink);
-}
 var timer = {
 	state: false,
 	timerId : setInterval(function (){timer.tick()}, 1000),
@@ -86,6 +76,7 @@ let switcher = function(action, target){
 		break;
 		case 'warn'://change background of target with yellow
 			$("#write_pause_button").addClass('bg-warning');
+			document.getElementById("sound_warn").volume = 0.75;
 			document.getElementById("sound_warn").play();
 		break;
 		case 'end':	//change the background of target with red and replace pause button with next.

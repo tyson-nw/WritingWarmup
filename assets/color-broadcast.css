@@ -1,0 +1,23 @@
+body{
+	background-color:white;
+	padding: 1rem;
+}
+header{
+	background-color: lightblue;
+	color: black;
+}
+header a{ 
+	color: black;
+}
+article{
+	background-color:white;
+}
+.warn{
+	background-color: yellow;
+}
+.end {
+	background-color: red;
+}
+#bad_prompt{
+	color:grey;
+}

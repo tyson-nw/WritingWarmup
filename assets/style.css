@@ -1,20 +1,7 @@
-body{
-	background-color:whitesmoke;
-	padding: 1rem;
-}
-header{
-	background-color: lightblue;
-	color: black;
-}
-header a{ 
-	color: black;
-}
 article{
 	margin: 2rem  3rem 0 1rem;
 	padding: 1rem;
-	max-width:991.98px;
-	background-color:white;
-	box-shadow: 1rem 1rem 2rem rgba(182, 182, 182, 0.5);  
+	max-width:991.98px; 
 }
 article h2, article h3{
 	text-align:center;
@@ -37,16 +24,9 @@ nav{
 nav#nav_source{
 	display: none;
 }
-.warn{
-	background-color: yellow;
-}
 .ad{
 	text-align: center;
 }
-.end {
-	background-color: red;
-}
-
 footer{
 	margin-top: 10rem;
 }
@@ -54,5 +34,4 @@ footer{
 #bad_prompt{
 	text-align: center;
 	font-size: .7rem;
-	color:grey;
 }

@@ -1,0 +1,31 @@
+body{
+	background-color: black;
+	color: floralwhite;
+	padding: 1rem;
+}
+header{
+	background-color: darkgrey;
+	color: #0D0300;
+}
+header a{ 
+	color: #0D0300;
+}
+article{
+	background-color:darkslategrey;
+}
+.warn{
+	background-color: yellow;
+}
+.end {
+	background-color: red;
+}
+#bad_prompt{
+	color:floralwhite;
+}
+footer{
+	background-color: darkgrey;
+	color: #0D0300;
+}
+footer a{ 
+	color: #0D0300;
+}

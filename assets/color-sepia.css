@@ -1,0 +1,31 @@
+body{
+	background-color:peru;
+	padding: 1rem;
+}
+header{
+	background-color: antiquewhite;
+	color: #0D0300;
+}
+header a{ 
+	color: #0D0300;
+}
+article{
+	background-color:antiquewhite;
+	box-shadow: 1rem 1rem 2rem burlywood;  
+}
+.warn{
+	background-color: yellow;
+}
+.end {
+	background-color: red;
+}
+#bad_prompt{
+	color:#594225;
+}
+footer{
+	background-color: peru;
+	color: #0D0300;
+}
+footer a{ 
+	color: #0D0300;
+}

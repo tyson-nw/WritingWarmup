@@ -14,6 +14,10 @@ article{
 	background-color:#413632;
 	box-shadow: .5rem .5rem 1rem #BA945F80;  
 }
+button {
+	background-color: #C7B9AE;
+	color: #372D29;
+}
 .warn{
 	background-color: yellow;
 }

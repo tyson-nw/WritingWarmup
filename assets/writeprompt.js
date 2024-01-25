@@ -19,7 +19,7 @@ var timer = {
 	start(length, nav, callback){
 		this.length = length * 60;
 		this.warn = this.length - 30;
-		console.log("Starting Timer for " + length + "minutes");
+		console.log("Starting Timer for " + length + " minutes");
 		this.callback = callback;
 		this.currentTick = 0;
 		this.state = true;
@@ -39,7 +39,7 @@ var timer = {
 	},
 	tick(){	
 		if(this.state){
-			console.log("timer active tick " +this.currentTick + "/" + this.length + " " + ((this.currentTick / this.length)*360));
+			//console.log("timer active tick " +this.currentTick + "/" + this.length + " " + ((this.currentTick / this.length)*360));
 			displaytimer.animateTo(((this.currentTick+1) / this.length)*360,1000);
 			this.currentTick++;
 			if(this.currentTick === this.warn){
@@ -139,7 +139,12 @@ class PromptsList{
 };
 
 let SwapPrompt = function(){
-	$('.current_prompt').text(promptList.next());
+	var new_prompt = promptList.next()
+	var instruction = $('.write_prompt:last').text();
+	console.log(instruction);
+	$('.current_prompt').text(new_prompt);
+	navigator.clipboard.writeText(instruction + "\n\n" + new_prompt);
+	
 };
 
 function newPrompt(cur){
@@ -172,10 +177,12 @@ function newPrompt(cur){
 			nextPrompt.addClass("text_prompt");
 			nextPrompt.append($("<p class='write_prompt'>"+promptTime.message+"</p>"));
 			nextPrompt.append($("<blockquote class='current_prompt'>"+promptText+"</blockquote>"));
+			navigator.clipboard.writeText(promptTime.message + "\n\n" + promptText);
 			nextPrompt.append($("#bad_prompt"));
 		break;
 		case 'free':
 			nextPrompt.append($("<p class='write_free'>"+promptTime.message+"</p>"));
+			navigator.clipboard.writeText(promptTime.message);
 		break;
 		case 'ad':
 			nextPrompt.append($("<h3>This is an advertizing prompt</h3>"));

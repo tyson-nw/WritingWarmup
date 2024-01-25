@@ -3,12 +3,12 @@
 		{
 			"length":1,
 			"type":"free",
-			"message":"Think about what you are warming up to write. Write the words that come to mind, they don't have to be complete sentences or thoughts. Just a free flow of thoughts, senses, descriptions and other words for two minutes."
+			"message":"Think about what you are warming up to write. Write the words that come to mind, they don't have to be complete sentences or thoughts. Just a free flow of thoughts, senses, descriptions and other words for one minute."
 		},
 		{
 			"length":2,
 			"type":"text",
-			"message":"Look at your list of words, write how do they relate to this prompt the next minute."
+			"message":"Look at your list of words, write how do they relate to this prompt for two minutes."
 		},
 		{
 			"length":3,

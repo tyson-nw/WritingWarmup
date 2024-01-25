@@ -8,8 +8,7 @@ var noSleep = new NoSleep();
 var displaytimer = new Sektor('#displaytimer', {
 	angle:0,
 	fillCircle: false,
-	sectorColor: '#212529',
-	//circleColor: 'white'
+	sectorColor: '#212529'
 });
 
 var timer = {
@@ -77,7 +76,7 @@ let switcher = function(action, target){
 		break;
 		case 'resume': //hide resume button, replace with pause
 			$( "#write_resume_button" ).appendTo($('#nav_source'));
-			$( "#displaytimer" ).appendTo($('#nav_source'));
+			//$( "#displaytimer" ).appendTo($('#nav_source'));
 			$( "#displaytimer" ).appendTo(target);
 			$( "#write_pause_button" ).appendTo(target);
 			$( "#write_pause_button" ).off();
@@ -87,7 +86,7 @@ let switcher = function(action, target){
 		case 'pause': //hide pause button, replace with resume
 			console.log('pause called');
 			$( "#write_pause_button" ).appendTo($('#nav_source'));
-			$( "#displaytimer" ).appendTo($('#nav_source'));
+			//$( "#displaytimer" ).appendTo($('#nav_source'));
 			$( "#displaytimer" ).appendTo(target);
 			$( "#write_resume_button" ).appendTo(target);
 			$( "#write_resume_button" ).off();
@@ -149,6 +148,7 @@ let SwapPrompt = function(){
 
 function newPrompt(cur){
 	console.log( "NewPrompt called" );
+	
 	$( "#write_first_button" ).appendTo($('#nav_source'));
 	$( "#write_next_button" ).appendTo($('#nav_source'));
 

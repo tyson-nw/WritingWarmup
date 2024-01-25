@@ -15,8 +15,9 @@
 	integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
 	crossorigin="anonymous"></script>
 	<script type="text/javascript" src='assets/NoSleep.min.js'></script>
-	<script type="text/javascript" src='assets/writeprompt.js'></script>
+	<script type="text/javascript" src='assets/sektor.js'></script>
 	<script type="text/javascript" src='assets/ColorSwitcher.js'></script>
+	
 </head>
 <body>
 	<header class='navbar'>
@@ -49,11 +50,12 @@
 	</footer>
 </body>
 <nav id='nav_source'>
+	<span id='displaytimer' ></span>
 	<button id='write_first_button' class='btn-lg badge-pill' >Get Started! &#x261E;</button>
 	<button id='write_next_button' class='btn-lg badge-pill bg-danger text-light'>Next Prompt</button>
-	<button id='write_start_button' class='btn-lg badge-pill'>Start Prompt</button>
-	<button id='write_pause_button' class='btn-lg badge-pill'>Pause Prompt</button>
-	<button id='write_resume_button' class='btn-lg badge-pill'>Resume Prompt</button>
+	<button id='write_start_button' class='btn-lg badge-pill'>Start Prompt </button>
+	<button id='write_pause_button' class='btn-lg badge-pill'>Pause Prompt </button>
+	<button id='write_resume_button' class='btn-lg badge-pill'>Resume Prompt </button>
 	<button id='write_print_button' class='btn-lg badge-pill'>Print your entries</button>
 	<div id='bad_prompt' onclick="SwapPrompt()">Give me a different prompt.</div>
 </nav>
@@ -67,3 +69,4 @@
 	<source src="assets/end.mp3" type="audio/mpeg">
 </audio>
 </html>
+<script type="text/javascript" src='assets/writeprompt.js'></script>

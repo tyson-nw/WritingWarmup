@@ -1,10 +1,16 @@
+
 const freePrompt = "This is a free prompt, just type what words enter your head";
 var times;
 var promptList;
 var current;
 var noSleep = new NoSleep();
 
-
+var displaytimer = new Sektor('#displaytimer', {
+	angle:0,
+	fillCircle: false,
+	sectorColor: '#212529',
+	//circleColor: 'white'
+});
 
 var timer = {
 	state: false,
@@ -19,6 +25,7 @@ var timer = {
 		this.state = true;
 		this.nav = nav;
 		this.callback('start', this.nav);
+		displaytimer.changeAngle(0);
 	},
 	pause(){
 		console.log("Pause timer at " +this.currentTick + "/" + this.length);
@@ -32,15 +39,19 @@ var timer = {
 	},
 	tick(){	
 		if(this.state){
-			console.log("timer active tick");
+			console.log("timer active tick " +this.currentTick + "/" + this.length + " " + ((this.currentTick / this.length)*360));
+			displaytimer.animateTo(((this.currentTick+1) / this.length)*360,1000);
 			this.currentTick++;
 			if(this.currentTick === this.warn){
 				console.log("timer warn");
 				this.callback('warn', this.nav);
+				displaytimer.sectorColor = "yellow";
 			}
 			if(this.currentTick === this.length){
 				console.log("timer end");
 				this.callback('end', this.nav);
+				displaytimer.sectorColor = "red";
+				displaytimer.animateTo(360,600);
 				this.state = false;
 				this.lenght = 0;
 			}
@@ -54,6 +65,7 @@ let switcher = function(action, target){
 	switch(action){
 		case 'start': //hide start button, replace with pause
 			$( "#write_start_button" ).appendTo($('#nav_source'));
+			$( "#displaytimer" ).appendTo(target);
 			$( "#write_pause_button" ).appendTo(target);
 			$( "#write_pause_button" ).off();
 			document.getElementById("sound_start").volume = 0.1;
@@ -61,9 +73,12 @@ let switcher = function(action, target){
 			$( "#write_pause_button" ).click(function(){timer.pause()});
 			noSleep.enable();
 			$("#bad_prompt").appendTo($('#nav_source'));
+			
 		break;
 		case 'resume': //hide resume button, replace with pause
 			$( "#write_resume_button" ).appendTo($('#nav_source'));
+			$( "#displaytimer" ).appendTo($('#nav_source'));
+			$( "#displaytimer" ).appendTo(target);
 			$( "#write_pause_button" ).appendTo(target);
 			$( "#write_pause_button" ).off();
 			$( "#write_pause_button" ).click(function(){timer.pause()});
@@ -72,6 +87,8 @@ let switcher = function(action, target){
 		case 'pause': //hide pause button, replace with resume
 			console.log('pause called');
 			$( "#write_pause_button" ).appendTo($('#nav_source'));
+			$( "#displaytimer" ).appendTo($('#nav_source'));
+			$( "#displaytimer" ).appendTo(target);
 			$( "#write_resume_button" ).appendTo(target);
 			$( "#write_resume_button" ).off();
 			$( "#write_resume_button" ).click(function(){timer.resume()});

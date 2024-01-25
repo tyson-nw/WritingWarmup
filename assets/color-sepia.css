@@ -5,7 +5,6 @@ body{
 }
 header{
 	background-color: #413632;
-	color: #413632;
 }
 header a{ 
 	color: #BA945F;
@@ -33,4 +32,12 @@ footer{
 }
 footer a{ 
 	color: #BA945F;
+}
+
+.Sektor-circle{
+	fill: #C7B9AE;
+}
+
+.Sektor-sector{
+	fill: #413632;
 }

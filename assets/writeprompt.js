@@ -42,13 +42,10 @@ var timer = {
 			if(this.currentTick === this.warn){
 //				console.log("timer warn");
 				this.callback('warn', this.nav);
-				displaytimer.sectorColor = "yellow";
 			}
 			if(this.currentTick === this.length){
 //				console.log("timer end");
 				this.callback('end', this.nav);
-				displaytimer.sectorColor = "red";
-				displaytimer.animateTo(360,600);
 				this.state = false;
 				this.lenght = 0;
 			}
@@ -61,11 +58,12 @@ var timer = {
 let switcher = function(action, target){
 	switch(action){
 		case 'start': //hide start button, replace with pause
+			$(".Sektor-sector").removeClass('sektor-end');
 			$( "#write_start_button" ).appendTo($('#nav_source'));
 			$( "#displaytimer" ).appendTo(target);
 			$( "#write_pause_button" ).appendTo(target);
 			$( "#write_pause_button" ).off();
-			document.getElementById("sound_start").volume = 0.1;
+			document.getElementById("sound_start").volume = 0.5;
 			document.getElementById("sound_start").play();
 			$( "#write_pause_button" ).click(function(){timer.pause()});
 			noSleep.enable();
@@ -75,7 +73,6 @@ let switcher = function(action, target){
 		case 'resume': //hide resume button, replace with pause
 			console.log('resume called');
 			$( "#write_resume_button" ).appendTo($('#nav_source'));
-			//$( "#displaytimer" ).appendTo($('#nav_source'));
 			$( "#displaytimer" ).appendTo(target);
 			$( "#write_pause_button" ).appendTo(target);
 			$( "#write_pause_button" ).off();
@@ -94,11 +91,15 @@ let switcher = function(action, target){
 		break;
 		case 'warn'://change background of target with yellow
 			$("#write_pause_button").addClass('bg-warning');
+			$(".Sektor-sector").addClass('sektor-warning');
 			document.getElementById("sound_warn").volume = 0.25;
 			document.getElementById("sound_warn").play();
 		break;
 		case 'end':	//change the background of target with red and replace pause button with next.
+			document.getElementById("sound_end").volume = 0.25;
 			document.getElementById("sound_end").play();
+			$(".Sektor-sector").removeClass('sektor-warning');
+			$(".Sektor-sector").addClass('sektor-end');
 			$("#write_pause_button").removeClass('bg-warning');
 			$( "#write_pause_button" ).appendTo($('#nav_source'));
 			$( "#write_next_button" ).appendTo(target);		
@@ -132,11 +133,13 @@ class PromptsList{
 		let high = this.prompts.slice(target);
 		let out = high.shift();
 		this.prompts = low.concat(high);
+		displaytimer.changeAngle(0);
 		return out;
 	}
 };
 
 let SwapPrompt = function(){
+	console.log( "SwapPrompt called" );
 	var new_prompt = promptList.next()
 	var instruction = $('.write_prompt:last').text();
 	console.log(instruction);
@@ -147,6 +150,7 @@ let SwapPrompt = function(){
 
 function newPrompt(cur){
 	console.log( "NewPrompt called" );
+	displaytimer.changeAngle(0);
 	$( "#displaytimer" ).appendTo($('#nav_source'));
 	$( "#write_first_button" ).appendTo($('#nav_source'));
 	$( "#write_next_button" ).appendTo($('#nav_source'));

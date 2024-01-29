@@ -33,3 +33,11 @@ footer{
 footer a{ 
 	color: #D8DBE2;
 }
+
+.sektor-warning{
+	fill: #ffc107;
+}
+
+.sektor-end{
+	fill: #dc3545;
+}

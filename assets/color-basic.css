@@ -22,3 +22,11 @@ article{
 #bad_prompt{
 	color:grey;
 }
+
+.sektor-warning{
+	fill: #ffc107;
+}
+
+.sektor-end{
+	fill: #dc3545;
+}

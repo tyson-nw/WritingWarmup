@@ -41,3 +41,11 @@ footer a{
 .Sektor-sector{
 	fill: #413632;
 }
+
+.sektor-warning{
+	fill: #ffc107;
+}
+
+.sektor-end{
+	fill: #dc3545;
+}

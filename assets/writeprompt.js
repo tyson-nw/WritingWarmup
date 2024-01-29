@@ -192,6 +192,7 @@ function newPrompt(cur){
 		break;
 		case 'complete':
 			$("article").css("display", "block");
+			window.scrollTo(0, document.body.scrollHeight);
 			nextPrompt.append($("<h3>Congradulations you have completed the excercise.</h3><p>Now take what you have written and get to writing more.</p><p>Good Luck!</p>"));
 			cur.after(nextPrompt);
 			$( "#write_next_button" ).detach() 

@@ -1,5 +1,3 @@
-
-const freePrompt = "This is a free prompt, just type what words enter your head";
 var times;
 var promptList;
 var current;
@@ -18,7 +16,7 @@ var timer = {
 	start(length, nav, callback){
 		this.length = length * 60;
 		this.warn = this.length - 30;
-		console.log("Starting Timer for " + length + " minutes");
+//		console.log("Starting Timer for " + length + " minutes");
 		this.callback = callback;
 		this.currentTick = 0;
 		this.state = true;
@@ -27,27 +25,27 @@ var timer = {
 		displaytimer.changeAngle(0);
 	},
 	pause(){
-		console.log("Pause timer at " +this.currentTick + "/" + this.length);
+//		console.log("Pause timer at " +this.currentTick + "/" + this.length);
 		this.state = false;
 		this.callback('pause', this.nav);
 	},
 	resume(){
-		console.log("Resume timer at " +this.currentTick + "/" + this.length);
+//		console.log("Resume timer at " +this.currentTick + "/" + this.length);
 		this.state = true;
 		this.callback('resume', this.nav);
 	},
 	tick(){	
 		if(this.state){
-			//console.log("timer active tick " +this.currentTick + "/" + this.length + " " + ((this.currentTick / this.length)*360));
+//			console.log("timer active tick");
 			displaytimer.animateTo(((this.currentTick+1) / this.length)*360,1000);
 			this.currentTick++;
 			if(this.currentTick === this.warn){
-				console.log("timer warn");
+//				console.log("timer warn");
 				this.callback('warn', this.nav);
 				displaytimer.sectorColor = "yellow";
 			}
 			if(this.currentTick === this.length){
-				console.log("timer end");
+//				console.log("timer end");
 				this.callback('end', this.nav);
 				displaytimer.sectorColor = "red";
 				displaytimer.animateTo(360,600);
@@ -55,7 +53,7 @@ var timer = {
 				this.lenght = 0;
 			}
 		}else{
-			console.log("tick");
+//			console.log("off tick");
 		}
 	}
 }
@@ -75,6 +73,7 @@ let switcher = function(action, target){
 			
 		break;
 		case 'resume': //hide resume button, replace with pause
+			console.log('resume called');
 			$( "#write_resume_button" ).appendTo($('#nav_source'));
 			//$( "#displaytimer" ).appendTo($('#nav_source'));
 			$( "#displaytimer" ).appendTo(target);
@@ -148,7 +147,7 @@ let SwapPrompt = function(){
 
 function newPrompt(cur){
 	console.log( "NewPrompt called" );
-	
+	$( "#displaytimer" ).appendTo($('#nav_source'));
 	$( "#write_first_button" ).appendTo($('#nav_source'));
 	$( "#write_next_button" ).appendTo($('#nav_source'));
 

@@ -1,3 +1,4 @@
+//https://github.com/Stanko/sektor
 function Sektor(selector, options) {
   this.element = document.querySelector(selector);
 

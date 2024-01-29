@@ -4,8 +4,7 @@ var currCSS = 0;
 var optionalCSS = [
     "color-basic.css",
     "color-sepia.css",
-    "color-dark.css",
-    "color-broadcast.css"
+    "color-dark.css"
 ];
 
 function cycleCSS() {

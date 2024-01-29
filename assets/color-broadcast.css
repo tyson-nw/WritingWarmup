@@ -15,6 +15,7 @@ header a{
 article{
 	background-color:white;
 	display: none;
+	margin-top: 0;
 }
 
 article:last-of-type{

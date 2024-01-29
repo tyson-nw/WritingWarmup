@@ -191,6 +191,7 @@ function newPrompt(cur){
 			nextPrompt.append($("<p class='write_ad'>For the next "+ promptTime.length+" minutes write use this advertisement banner as inspiration. If you don't feel comfortable with that, press next now.</p>"));
 		break;
 		case 'complete':
+			$("article").css("display", "block");
 			nextPrompt.append($("<h3>Congradulations you have completed the excercise.</h3><p>Now take what you have written and get to writing more.</p><p>Good Luck!</p>"));
 			cur.after(nextPrompt);
 			$( "#write_next_button" ).detach() 

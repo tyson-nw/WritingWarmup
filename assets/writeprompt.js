@@ -5,7 +5,6 @@ var noSleep = new NoSleep();
 
 var displaytimer = new Sektor('#displaytimer', {
 	angle:0,
-	fillCircle: false,
 	sectorColor: '#212529'
 });
 

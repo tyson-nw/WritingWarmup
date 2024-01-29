@@ -203,8 +203,8 @@ function newPrompt(cur){
 	let nav = $(document.createElement("nav"));
 	nav.attr('id','left'+times.length);
 	nextPrompt.append($(nav));
-		
-	nav.append(  $( "#write_start_button" ).detach()  );
+	nav.append( $("#displaytimer") );
+	nav.append(  $( "#write_start_button" ) );
 	$(document).one('click',"#write_start_button",function(){
 		console.log('#write_start_button clicked');
 		timer.start(promptTime.length, nav, switcher);

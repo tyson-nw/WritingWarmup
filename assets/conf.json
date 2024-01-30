@@ -23,12 +23,12 @@
 		{
 			"length":5,
 			"type":"text",
-			"message": "Write how would your character react to this prompt for five minutes"
+			"message": "Write how would your character react to this prompt for five minutes."
 		},
 		{
 			"length":2,
 			"type":"free",
-			"message":"Now think of another character in the story you are going to work on. Write the words that come to your mind when you think about this character freely for two minutes"
+			"message":"Now think of another character in the story you are going to work on. Write the words that come to your mind when you think about this character freely for two minutes."
 		},
 		{
 			"length":3,
